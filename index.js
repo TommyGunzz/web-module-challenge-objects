@@ -22,7 +22,7 @@ console.log(pies);
 const shake = createMenuItem("shake", 8, "Cold Desert");
 console.log(shake);
 
-const salad = createMenuItem("salasBowl", 5, "healthy");
+const salad = createMenuItem("saladBowl", 5, "healthy");
 console.log(salad);
 
 
@@ -34,7 +34,20 @@ Your method should accept:
 
 and should return a number. 
 
-For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
+For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
+const burger = {name: "Burger", price: 18, category: "Lunch"};       */
+burger.discount = function(discount){
+  let result;
+  if (discount === "teacher") {
+    result = 13.5;
+  } else if (discount === "student") { result = 13.5;
+  } else { result = 16.2;};
+
+  return result;
+}
+
+console.log(burger.discount("public"));
+console.log(burger);
 
 
 

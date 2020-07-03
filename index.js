@@ -71,9 +71,10 @@ reviews[5].feedback= "Reviewer, Tommy Gunzz's didn't have a problem with the ven
 console.log(reviews[5].feedback);
 
 
-/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+/* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
 
-
+reviews[7].feedback= "this place is chill with really cool people, great for getting work done on weekdays.";
+console.log("Now "+reviews[7].name+ " says," + reviews[7].feedback);
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
@@ -88,8 +89,9 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 function getReviewByIndex(reviews, index) {
-    /* code here */
-  }
+    console.log(reviews[index].name + " gave the restaurant a rating of: "+ reviews[index].rating + " ,and their feedback was: "+ reviews[index].feedback );}
+  
+  getReviewByIndex(reviews,4);
   
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
@@ -101,10 +103,17 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
-  } 
 
+function getLastReview(arrObj) {
+          let i = 0;
+          for (i=0;i < arrObj.length-1; i++);
+          if (arrObj[i] && arrObj[i].length-1){
+            console.log(arrObj[i].rating)} else {
+             console.log(arrObj[i].name +" gave the restaurant a "+ arrObj[i].rating + " star review and their feedback was: "+ arrObj[i].feedback)
+            };
+     };
+        
+getLastReview(reviews);
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 

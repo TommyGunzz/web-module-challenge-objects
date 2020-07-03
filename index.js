@@ -1,5 +1,5 @@
 ///////////////Menu Items (MVP)///////////////////
-
+const shop = {};
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
 const burger = {name: "Burger", price: 18, category: "Lunch"};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
@@ -44,7 +44,7 @@ burger.discount = function(discount){
   } else { result = 16.2;};
 
   return result;
-}
+};
 
 console.log(burger.discount("public"));
 console.log(burger);
@@ -63,12 +63,17 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
     {name:"Reyna", rating: 3.5, feedback: ""},
 ]
 /* Task 3: Console.log just Julius' feedback */
-
+console.log(reviews[5].name + "," + reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 
+reviews[5].feedback= "Reviewer, Tommy Gunzz's didn't have a problem with the venue. He recieved Extra large portions and Complimentary Wine and Appitizers, guess it pays to be an Outstanding Tipper.";
+console.log(reviews[5].feedback);
+
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
+
+
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
